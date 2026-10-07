@@ -1,0 +1,36 @@
+@base = https://sis-ca.com.mx:7863/carobra-api/index.php/api
+
+### Login
+POST {{base}}/login
+Content-Type: application/json
+
+{
+  "clave": "MATNAHORT",
+  "contrasena": "DzVuYd*-53"
+}
+
+### Buscar folio
+GET {{base}}/buscar-folio?q=8080
+
+### Buscar NAP
+GET {{base}}/buscar-nap?q=1112
+
+### Buscar comisionista
+GET {{base}}/buscar-comisionista?q=garcia
+
+### Afores
+GET {{base}}/afores
+
+### Guardar traspaso
+POST {{base}}/guardar-traspaso
+Content-Type: application/json
+
+{
+  "folio": "8080398430",
+  "no_empleado": "123",
+  "afo_cedente": "SURA",
+  "acompanamiento": "0.00"
+}
+
+### Test Push
+GET https://sis-ca.com.mx:7863/carobra-api/test_push.php
